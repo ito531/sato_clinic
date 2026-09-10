@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>診療内容｜佐藤医院</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="top" class="page services-page">
+    <main>
+        <div class="breadcrumb"><a href="./index.html">トップ</a> ＞ 診療内容</div>
+        <section class="sub-title">
+            <h1>診療内容</h1>
+        </section>
+        <p class="services-lead">
+            当院では、地域の皆様の健康を支えるため、幅広い内科診療を行っております。<br>日常的な体調管理から、各種の検査や治療に至るまで、どんなお悩みもお気軽にご<br>相談ください。</p>
+        <section class="works-slider" data-carousel="works">
+            <div class="works-track">
+                <section class="service-row tint works-slide">
+                    <div class="service-inner"><img class="service-img" src="./assets/Medical_Image/medical_4.jpg"
+                            alt="">
+                        <div class="service-copy">
+                            <h2>一般内科診療</h2>
+                            <p>風邪や発熱、喉の痛み、頭痛、腹痛などの症状を中心に、一般的な<br>体調不良の診療を行っています。また、原因不明の不調や軽い症状<br>であっても、早期診断に努めております。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="service-row reverse works-slide">
+                    <div class="service-inner"><img class="service-img" src="./assets/Medical_Image/medical_8.jpg"
+                            alt="">
+                        <div class="service-copy">
+                            <h2>生活習慣病の診断・治療</h2>
+                            <p>高血圧症、糖尿病、脂質異常症（高コレステロール血症）、メタボリッ<br>ク症候群など、生活習慣病の診断と治療を行います。病気の進行を予防<br>し、健康維持のための生活指導や薬物療法を行います。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="service-row tint works-slide">
+                    <div class="service-inner"><img class="service-img" src="./assets/Patient_Image/patient_7.jpg"
+                            alt="">
+                        <div class="service-copy">
+                            <h2>消化器系の診療</h2>
+                            <p>胃痛、胃もたれ、胸やけ、便秘、下痢などの消化器系の不調に対応<br>しています。必要に応じて胃カメラや超音波検査などを実施し、胃<br>腸の健康をサポートします。</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="service-row reverse works-slide">
+                    <div class="service-inner"><img class="service-img" src="./assets/Medical_Image/medical_10.jpg"
+                            alt="">
+                        <div class="service-copy">
+                            <h2>呼吸器系の診療</h2>
+                            <p>咳、息切れ、胸の痛みなど、呼吸器系の症状について診療を行って<br>います。季節性の喘息やアレルギー性鼻炎、慢性閉塞性肺疾患<br>（COPD）などにも対応し、適切な治療と予防をサポートします。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="service-row tint works-slide">
+                    <div class="service-inner"><img class="service-img" src="./assets/Medical_Image/medical_11.jpg"
+                            alt="">
+                        <div class="service-copy">
+                            <h2>健康診断・各種検査</h2>
+                            <p>定期健康診断をはじめ、血液検査、尿検査、心電図、超音波検<br>査、レントゲン検査などを行い、病気の早期発見と予防に努めま<br>す。異常が見つかった場合は、経過観察や専門治療へとつなげて<br>まいります。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="service-row reverse works-slide">
+                    <div class="service-inner"><img class="service-img" src="./assets/Medical_Image/medical_3.jpg"
+                            alt="">
+                        <div class="service-copy">
+                            <h2>予防接種</h2>
+                            <p>インフルエンザや肺炎球菌などの各種予防接種を行っています。定<br>期的な接種で感染予防と体調管理を支援いたします。予防接種は予<br>約制となりますので、事前にお問い合わせください。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="service-row tint works-slide">
+                    <div class="service-inner"><img class="service-img" src="./assets/Medical_Image/medical_9.jpg"
+                            alt="">
+                        <div class="service-copy">
+                            <h2>禁煙外来</h2>
+                            <p>禁煙をご希望の方に、禁煙治療とサポートを行っています。必要<br>に応じて、ニコチン依存症の治療薬を使用し、無理なく禁煙が継<br>続できるようお手伝いいたします。</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="works-dots" aria-label="ページネーション"></div>
+        </section>
+        <div class="services-spacer"></div>
+        <div class="to-top"><a href="#top">△TOP</a></div>
+    </main>
+    <footer class="footer">©佐藤医院</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousels = document.querySelectorAll('[data-carousel="works"]');
+            carousels.forEach(function (carousel) {
+                const track = carousel.querySelector('.works-track');
+                const slides = Array.from(track ? track.children : []);
+                const dotsWrap = carousel.querySelector('.works-dots');
+                if (!track || slides.length < 2 || !dotsWrap) return;
+                const dots = [];
+                slides.forEach(function (_, index) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'works-dot' + (index === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', 'スライド ' + (index + 1) + ' を表示');
+                    dot.addEventListener('click', function () { updateCarousel(index); });
+                    dots.push(dot);
+                    dotsWrap.appendChild(dot);
+                });
+                let currentIndex = 0;
+                let startX = 0;
+                let isDragging = false;
+                function updateCarousel(nextIndex) {
+                    const maxIndex = slides.length - 1;
+                    currentIndex = Math.min(Math.max(nextIndex, 0), maxIndex);
+                    track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+                    dots.forEach(function (dot, dotIndex) {
+                        dot.classList.toggle('active', dotIndex === currentIndex);
+                    });
+                }
+                track.addEventListener('touchstart', function (event) {
+                    if (window.innerWidth > 480) return;
+                    startX = event.touches[0].clientX;
+                    isDragging = true;
+                }, { passive: true });
+                track.addEventListener('touchend', function (event) {
+                    if (!isDragging || window.innerWidth > 480) return;
+                    const endX = event.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    if (Math.abs(diff) > 40) {
+                        updateCarousel(currentIndex + (diff > 0 ? 1 : -1));
+                    } else {
+                        updateCarousel(currentIndex);
+                    }
+                    isDragging = false;
+                }, { passive: true });
+                const resetOnResize = function () {
+                    if (window.innerWidth > 480) {
+                        track.style.transform = '';
+                        dots.forEach(function (dot, index) {
+                            dot.classList.toggle('active', index === 0);
+                        });
+                    } else {
+                        updateCarousel(currentIndex);
+                    }
+                };
+                window.addEventListener('resize', resetOnResize);
+                resetOnResize();
+            });
+        });
+    </script>
+    <script src="./js/reveal-on-scroll.js"></script>
+</body>
+
+</html>
